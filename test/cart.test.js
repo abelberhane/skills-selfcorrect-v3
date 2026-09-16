@@ -2,7 +2,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { addItem, removeItem, subtotal } = require('../src/cart');
+const { addItem, removeItem, subtotal, applyDiscount } = require('../src/cart');
 
 test('addItem defaults quantity to one', () => {
   const cart = addItem([], { id: 'apple', price: 2.5 });
@@ -30,4 +30,9 @@ test('subtotal multiplies price by quantity', () => {
 
 test('subtotal of an empty cart is zero', () => {
   assert.equal(subtotal([]), 0);
+});
+
+test('applyDiscount reduces every price by the given percent', () => {
+  const cart = addItem([], { id: 'apple', price: 10 });
+  assert.equal(applyDiscount(cart, 25)[0].price, 7.5);
 });
