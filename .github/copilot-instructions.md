@@ -22,4 +22,13 @@ Rules below are managed only through reviewed candidate pull requests.
 - **Scope:** repository
 - **Provenance:** bootstrap example; approved by repository maintainers
 
+### RULE-TEST-FAA1C2FD43E0
+
+- **Category:** TEST
+- **State:** active
+- **Rule:** Always add unit tests for new exported functions.
+- **Rationale:** applyDiscount shipped without any test coverage.
+- **Scope:** path:src/
+- **Provenance:** [PR #2 comment 5703583172](https://github.com/abelberhane/skills-selfcorrect-v3/pull/2#issuecomment-5703583172) by @abelberhane
+
 <!-- learned-rules:end -->
